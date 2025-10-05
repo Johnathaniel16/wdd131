@@ -58,8 +58,8 @@ footer .logo {
 
 /* Dark theme styles */
 .dark {
-  background-color: #333; /* dark background */
-  color: #fff;           /* light text */
+  background-color: #333; 
+  color: #fff;          
 }
 
 .dark header {
