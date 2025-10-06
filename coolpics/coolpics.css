@@ -61,6 +61,7 @@ header h1 {
   font: inherit;
   padding: 0.25rem 0.5rem;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .menu-btn:focus-visible {
@@ -68,9 +69,11 @@ header h1 {
   outline-offset: 2px;
 }
 
+
 nav {
   display: none;
 }
+
 
 nav.show {
   display: block;
@@ -122,8 +125,14 @@ main h2 {
   object-fit: cover;
   background: #fff;
   border: 6px solid #fff;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.25);
   border-radius: 4px;
+
+  -webkit-tap-highlight-color: transparent;
+}
+.gallery img:focus,
+.gallery img:focus-visible {
+  outline: none;
 }
 
 footer {
@@ -139,7 +148,6 @@ footer {
   .gallery {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
   }
-
   main {
     padding: 1.5rem;
   }
@@ -149,22 +157,71 @@ footer {
   .menu-btn {
     display: none;
   }
-
   nav {
     display: block;
   }
-
   nav ul {
     flex-direction: row;
     gap: 2rem;
   }
-
   .gallery {
     grid-template-columns: repeat(3, minmax(250px, 1fr));
     gap: 20px;
   }
-
   header h1 {
     font-size: 1.8rem;
+  }
+}
+
+dialog.viewer {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 10;
+}
+
+dialog.viewer::backdrop {
+  background: transparent; 
+}
+
+.viewer-content {
+  position: relative;
+  width: 90%;
+  margin: 20vh auto;   
+  max-height: 60vh;
+}
+
+.viewer-content img {
+  display: block;
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+
+}
+
+
+button.close-viewer {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  .viewer-content {
+    width: 80%;
+    max-height: 70vh;
+    margin: 15vh auto;
+  }
+  .viewer-content img {
+    max-height: 70vh;
   }
 }
