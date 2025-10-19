@@ -215,6 +215,9 @@ button.close-viewer {
   font-weight: 600;
 }
 
+
+
+
 @media (min-width: 700px) {
   .viewer-content {
     width: 80%;
