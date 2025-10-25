@@ -128,3 +128,45 @@ footer{
 
 a{ color: var(--red); }
 a:hover{ text-decoration: underline; }
+
+
+
+main.page{
+  max-width: 1000px;
+  margin: 24px auto 48px;
+  padding: 0 16px;
+}
+
+
+.post-details{
+  text-align: right;
+  border-right: 2px solid var(--gold);
+  padding-right: 12px;   
+  margin-right: 12px;    
+  font-size: 0.98rem;
+}
+.post-details time{
+  display: block;
+  font-size: 1.2rem;     
+  font-weight: 700;
+  margin: 4px 0 6px;
+}
+.post-details li{ margin: 2px 0; }  
+
+
+.post-content h2{
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* center the book cover */
+.post-content figure{
+  margin: 8px 0 12px;
+  display: grid;
+  place-items: center;
+}
+.post-content img{
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+}
